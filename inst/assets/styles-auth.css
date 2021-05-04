@@ -6,10 +6,23 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #FFF;
-  opacity: 1;
+/*   background-color: #FFF; */
+/*   opacity: 1; */
   z-index: 99997;
   overflow-x: hidden;
   overflow-y: scroll;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
