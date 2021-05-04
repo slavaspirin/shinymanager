@@ -45,10 +45,10 @@ auth_ui <- function(id, status = "primary", tags_top = NULL,
     singleton(tags$head(
       tags$link(href="shinymanager/styles-auth.css", rel="stylesheet"),
       tags$script(src = "shinymanager/bindEnter.js"),
-      if(!is.null(background)){
-        background <- gsub(";$", "", background)
-        tags$style(HTML(paste0(".panel-auth {background:", background, ",#FFF;}")))
-      }
+      #if(!is.null(background)){
+       # background <- gsub(";$", "", background)
+        #tags$style(HTML(paste0(".panel-auth {background:", background, ",#FFF;}")))
+      #}
     )),
     tags$div(
       id = ns("auth-mod"), class = "panel-auth",
