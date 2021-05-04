@@ -156,6 +156,20 @@ secure_app <- function(ui,
       args$lan <- lan
       fluidPage(
         theme = theme,
+        tags$head(tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js")),
+                          tags$canvas(class="background"),
+                          tags$body(tags$script(src="path/to/particles.min.js")),
+                          tags$script("window.onload = function() {
+                  Particles.init({
+                    selector: '.background',
+                    speed: '0.25',
+                    maxParticles: 100,
+                    connectParticles: true,
+                    color: '#969696',
+                    sizeVariations: 6
+
+                  });
+                };"),
         tags$head(head_auth),
         do.call(auth_ui, args),
         shinymanager_where("authentication"),
